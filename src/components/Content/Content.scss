@@ -1,0 +1,27 @@
+.media{
+    padding-top: 140px !important;
+    h2{
+        font-size: 22px;
+        color: white;
+        margin-bottom: 51px;
+    }
+    &__content-pagination{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+        gap: 50px;
+        color: white;
+        font-size: 20px;
+        button{
+            padding: 10px 30px;
+            color: black;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        output{
+            font-family: "Montserrat";
+        }
+    }
+}

@@ -1,0 +1,92 @@
+@import url(fonts.scss);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    list-style: none;
+    font-family: Raleway;
+}
+
+.container{
+    max-width: 1320px;
+    padding: 0 12px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+body{
+    background: #141414;
+}
+
+.main__search{
+    padding-top: 120px;
+    input{
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        font-weight: 700;
+       &::placeholder{
+        color: black;
+        font-weight: 700;
+       }
+    }
+    &-results{
+        display: flex;
+        gap: 17px;
+        flex-wrap: wrap;
+        user-select: none;
+        a{
+            height: 462px;
+            width: 311px;
+            box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: .3s;
+            &:hover{
+                box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.3);
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+.main__current{
+    .media__info{
+        margin: 0 0 50px;
+        .blur{
+            filter: blur(10px);
+        }
+        img:last-of-type{
+            right: 15%;
+            top: 17%;
+            border-radius: 10px;
+            width: 311px;
+            height: 462px;
+        }
+    }
+}
+
+.more-btn{
+    padding: 10px 18px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: #149A03;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+@import url(../../components/Header/Header.scss);
+@import url(../../components/Upcoming/Upcoming.scss);
+@import url(../../components/TAM/Content.scss);
+@import url(../../components/ItemBlock/ItemBlock.scss);
+@import url(../../components/Top/Top.scss);
+@import url(../../components/Content/Content.scss);

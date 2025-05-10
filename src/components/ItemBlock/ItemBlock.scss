@@ -1,0 +1,107 @@
+.media__info{
+    height: 0;
+    margin: 30px 0 50px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+    &.active{
+        height: 700px;
+    }
+    > i{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        font-size:50px;
+        color: white;
+        cursor: pointer;
+    }
+    &-content{
+        height: 100%;
+        padding-left: 50px;
+        background: linear-gradient(90deg, #000 40.69%, rgba(0, 0, 0, 0.2) 63.85%, rgba(0, 0, 0, 0) 68.23%);
+        color: white;
+        &-block{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            height: 100%;
+            gap: 30px;
+            h3{
+                font-size: 50px;
+            }
+            p{
+                max-width: 1000px;
+                font-size: 20px;
+                line-height: 1.5;
+            }
+            span{
+               font-variant-numeric: lining-nums;
+               font-size: 20px; 
+               font-weight: 700;
+            }
+        }
+        > img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        h4{
+            margin-top: 71px;
+        }
+        .actors{
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            &__item{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                border: 1px solid #FFFFFF;
+                border-radius: 25px;
+                padding: 2px 15px 2px 2px;
+                img{
+                    width: 50px !important;
+                    height: 50px !important;
+                    object-fit: cover;
+                    border-radius: 100% !important;
+                }
+            }
+        }
+    }
+}
+
+.media__mid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 80px;
+    color: white;
+    &-item{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        h3{
+            font-size: 22px;
+        }
+        p{
+            font-size: 20px;
+            font-family: "Montserrat";
+        }
+    }
+}
+.media__rec{
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+   display: flex;
+   color: white;
+   h2{
+    margin-bottom: 20px;
+    width: 100%;
+   }
+}

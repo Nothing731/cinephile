@@ -1,0 +1,103 @@
+.main__upcoming{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    user-select: none;
+    &-animate{
+        opacity: 0;
+        position: absolute;
+        transition: .3s linear;
+        width: 100%;
+        &.active {
+            opacity: 1;
+            z-index: 1;
+            .line::after{
+                animation: fill 10s infinite ease-in-out;
+            }
+        }
+    }
+    &-item{
+        height: 100vh;
+        > img{
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        color: white;
+        gap: 50px;
+        text-align: center;
+        background: #14141476;
+        h1{
+            font-size: 80px;
+        }
+        p{
+            max-width: 1100px;
+            font-size: 20px;
+        }
+    }
+    &-next{
+        height: 100px;
+        width: 576px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        overflow: hidden;
+        border-radius: 10px;
+        cursor: pointer;
+        img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 50%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        div:first-of-type{
+            width: 100%;
+            height: 100%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+            background: linear-gradient(90deg, #000 50%, rgba(0, 0, 0, 0.1) 100%);
+            padding: 15px;
+        }
+    }
+    .line{
+        background: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        &::after{
+            content: '';
+            display: block;
+            height: 3px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: white;
+            
+        }
+        @keyframes fill {
+            from{
+               width: 0; 
+            }to{
+                width: 100%;
+            }
+        }
+    }
+}
